@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake News Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!--    <link href="../static/design.css" rel="stylesheet">-->
+</head>
+<body>
 
+<div style="color:#212529" class="fluid-container" align="center">
+    <h2>Welcome!</h2>
+
+    <h4> Please enter a news search term: </h4>
+
+    <br>
+
+    {# [START form] #}
+
+    {% block content %}
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <div>
+            <input type="text" id="headline" name="headline" placeholder="Enter...">
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary">Generate News</button>
+    </form>
+
+    {# [END form] #} {% endblock %}
+
+    <br>
+    <div>
+     {{news}}
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
